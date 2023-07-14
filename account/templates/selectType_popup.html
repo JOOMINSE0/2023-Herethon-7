@@ -303,7 +303,7 @@
                     <button class="button button8" onclick="changeButtonColor(this)"><b style="font-size: 10px;">자연, 시골</b></button>
                 </div>
  
-                <button class="finish-button"><b style="font-size: 20px;">완료하기</b></button>
+                <button  class="finish-button"><b style="font-size: 20px;">완료하기</b></button>
               
         </div>
                     <!-- 모달 창 -->
@@ -379,7 +379,7 @@ function changeButtonColor(button) {
 
   // 각 버튼 그룹 중 최소한 하나의 버튼이 선택된 경우에만 모달 표시
   if (selectedButtons1.length > 0 && selectedButtons2.length > 0 && selectedButtons3.length > 0 && selectedButtons4.length > 0) {
-    window.location.href = "#";
+    window.location.href = "{% url 'login' %}";
   }
 }
 
@@ -414,7 +414,7 @@ function changeButtonColor(button) {
           showModal();
           return false;
         } else {
-          window.location.href = "#";
+          window.location.href = "{% url 'login' %}";
         }
       };
     };
